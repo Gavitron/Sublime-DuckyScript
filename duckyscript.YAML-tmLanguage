@@ -11,7 +11,7 @@ patterns:
   match: 'REM (.*)'
   captures:
     '1': {name: comment.line.character}
-  match: '//// (.*)'
+  match: '\/\/ (.*)'
   captures:
     '1': {name: comment.line.character}
 
