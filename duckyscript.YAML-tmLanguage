@@ -8,12 +8,9 @@ uuid: cef29f05-079c-40e1-9f2c-84b681946961
 patterns:
 - comment: Comment keyword.
   name: keyword.other.duckyscript
-  match: 'REM (.*)'
+  match: '(REM|\/\/) (.*)'
   captures:
-    '1': {name: comment.line.character}
-  match: '\/\/ (.*)'
-  captures:
-    '1': {name: comment.line.character}
+    '2': {name: comment.line.character}
 
 - comment: String keyword.
   match: '(STRING) (.*)'
