@@ -14,7 +14,7 @@ contexts:
       scope: keyword.other.duckyscript
       captures:
         1: comment.line.character
-    - match: \/\/ (.*)
+    - match: \/\/(.*)
       comment: Comment keyword.
       scope: keyword.other.duckyscript
       captures:
