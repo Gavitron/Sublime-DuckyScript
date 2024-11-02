@@ -1,0 +1,50 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/syntax.html
+name: DuckyScript
+file_extensions:
+  - ds
+  - dscript
+  - ducky
+scope: source.duckyscript
+contexts:
+  main:
+    - match: REM (.*)
+      comment: Comment keyword.
+      scope: keyword.other.duckyscript
+      captures:
+        1: comment.line.character
+    - match: \/\/ (.*)
+      comment: Comment keyword.
+      scope: keyword.other.duckyscript
+      captures:
+        1: comment.line.character
+    - match: (STRING) (.*)
+      comment: String keyword.
+      captures:
+        1: keyword.other.duckyscript
+        2: string.unquoted.duckyscript
+    - match: ENTER|DEFAULT_DELAY|DEFAULTDELAY|DELAY|REPLAY
+      comment: Keywords.
+      scope: keyword.other.duckyscript
+    - match: WINDOWS|GUI|MENU|APP
+      comment: Special keys.
+      scope: entity.name.type.duckyscript
+    - match: CONTROL|CTRL|ALT|SHIFT|INSERT|DELETE|SPACE
+      comment: Action keys.
+      scope: entity.name.type.duckyscript
+    - match: HOME|END|PAGEUP|PAGEDOWN|UPARROW|DOWNARROW|LEFTARROW|RIGHTARROW|UP|DOWN|LEFT|RIGHT|TAB|ESC|ESCAPE
+      comment: Movement keys.
+      scope: entity.name.type.duckyscript
+    - match: CAPSLOCK|NUMLOCK|SCROLLOCK
+      comment: Lock keys.
+      scope: entity.name.type.duckyscript
+    - match: 'F[1-9][0-2]*'
+      comment: Function keys.
+      scope: keyword.other.duckyscript
+    - match: PRINTSCREEN|PAUSE|BREAK
+      comment: Other keys.
+      scope: entity.name.type.duckyscript
+    - match: '[0-9]+'
+      comment: Numerals.
+      scope: constant.numeric.duckyscript
